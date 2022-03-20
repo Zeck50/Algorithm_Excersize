@@ -34,24 +34,22 @@ nums 是一个非递减数组
     public int[] searchRange(int[] nums, int target) {
         int leftbound=getLeftBound(nums,target);
         int rightbound= getRightBound(nums,target);
-        int[] result=new int[2];
-        result[0]=leftbound;
-        result[1]=rightbound;
-        return result;
+        if (leftbound <= rightbound && rightbound < nums.length && nums[leftbound] == target && nums[rightbound] == target) {
+            return new int[]{leftbound, rightbound};
+        }
+        return new int[]{-1, -1};
     }
 
     public int getLeftBound(int[] nums, int target)
     {
         int left=0;
         int right=nums.length-1;
-        boolean isNumsContainTarget=false;
         while(left<=right)
         {
             int mid=left+(right-left)/2;
             if(nums[mid]==target)
             {
                 right=mid-1;
-                isNumsContainTarget=true;
             }
             else if(nums[mid]<target)
             {
@@ -62,14 +60,7 @@ nums 是一个非递减数组
                 right=mid-1;
             }
         }
-        if(isNumsContainTarget)
-        {
-            return left;
-        }
-        else
-        {
-            return -1;
-        }
+       return left;
 
     }
 
@@ -77,14 +68,12 @@ nums 是一个非递减数组
     {
         int left=0;
         int right=nums.length-1;
-        boolean isNumsContainTarget=false;
         while(left<=right)
         {
             int mid=left+(right-left)/2;
             if(nums[mid]==target)
             {
                 left=mid+1;
-                isNumsContainTarget=true;
             }
             else if(nums[mid]<target)
             {
@@ -95,14 +84,7 @@ nums 是一个非递减数组
                 right=mid-1;
             }
         }
-        if(isNumsContainTarget)
-        {
-            return right;
-        }
-        else
-        {
-            return -1;
-        }
+       return right;
     }
 
     public static void main(String[] args)
