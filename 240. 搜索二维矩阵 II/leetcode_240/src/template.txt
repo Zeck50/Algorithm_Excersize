@@ -1,0 +1,22 @@
+ public boolean searchMatrix(int[][] matrix, int target) {
+        boolean result=false;
+        while(...)
+        {
+            if(...)
+            {
+                ...
+                break;
+            }
+            else if(...)
+            {
+                ...
+                continue;
+            }
+            else if(...)
+            {
+                ...
+                continue;
+            }
+        }
+        return result;
+    }
