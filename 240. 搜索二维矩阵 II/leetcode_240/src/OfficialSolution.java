@@ -1,13 +1,16 @@
 public class OfficialSolution {
     public boolean searchMatrix(int[][] matrix, int target) {
+        //1.二维矩阵索引的标号和传统数学坐标系不同
         int i=0;
         int j=matrix[0].length-1;
         boolean result=false;
+        //2、二分法思想在二维的应用
         while(i<matrix.length&&j>=0)
         {
             if(matrix[i][j]==target)
             {
                 result= true;
+                //3、while中要适时跳出循环
                 break;
             }
             else if(matrix[i][j]>target)
