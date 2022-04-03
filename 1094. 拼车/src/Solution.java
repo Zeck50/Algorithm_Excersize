@@ -3,17 +3,21 @@ public class Solution {
         boolean result=true;
         int[] diff=new int[1000];
         int[] statistics=new int[1000];
+        //1.差分数组思想的应用
         for(int i=0;i<trips.length;i++)
         {
             int count=trips[i][0];
             int start=trips[i][1];
+            //2.区间结束端点的处理，本题为左闭右开区间
             int end=trips[i][2]-1;
             diff[start]=diff[start]+count;
+            //3.差分数组结束端点的处理
             if(end+1<1000)
             {
                 diff[end+1]=diff[end+1]-count;
             }
         }
+        //4.还原数组时首元素的处理
         statistics[0]=diff[0];
         if(statistics[0]>capacity)
         {
@@ -33,7 +37,7 @@ public class Solution {
 
     public static void main(String[] args)
     {
-        /*
+
         int[][] trips1={{2,1,5},{3,3,7}};
         int capacity1=4;
         boolean result1=(new Solution()).carPooling(trips1,capacity1);
@@ -57,7 +61,6 @@ public class Solution {
 
         System.out.println();
 
-         */
 
         int[][] trips4={{9,0,1},{3,3,7}};
         int capacity4=4;
