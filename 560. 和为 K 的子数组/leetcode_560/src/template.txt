@@ -1,0 +1,16 @@
+        int result=0;
+        HashMap<Integer,Integer> map=new HashMap<>();
+        map.put(0,1);
+        int sum0_i=0;
+        int sum0_j=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum0_i=sum0_i+nums[i];
+            sum0_j=sum0_i-k;
+            if(map.containsKey(sum0_j))
+            {
+                result=result+map.get(sum0_j);
+            }
+            map.put(sum0_i,map.getOrDefault(sum0_i,0)+1);
+        }
+        return result;
