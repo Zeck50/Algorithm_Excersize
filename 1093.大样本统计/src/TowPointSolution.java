@@ -76,13 +76,14 @@ public class TowPointSolution {
         }
         return result;
     }
-
+    //1.考察双指针法中的左右指针求解中位数的思想
     private double getMedian(int[] count, int sum) {
         double median=0;
         int left=0;
         int right=count.length-1;
         double countSumLeft=0;
         double countSumRight=0;
+        //2.考察使用count计数终止循环的技巧
         int countTemp=0;
         while(left < right&&countTemp<count.length)
         {
@@ -98,10 +99,7 @@ public class TowPointSolution {
                 right--;
             }
         }
-       if(median==0&&left>0&&right>0)
-       {
-           median=(left+right)/2.0;
-       }
+        median=(left+right)/2.0;
         return median;
     }
 
