@@ -1,0 +1,16 @@
+    private int[][] preSumMatrix;
+    public OfficialNumMatrix(int[][] matrix) {
+        preSumMatrix=new int[matrix.length+1][matrix[0].length+1];
+        for(int i=1;i<=matrix.length;i++)
+        {
+            for(int j=1;j<=matrix[0].length;j++)
+            {
+                preSumMatrix[i][j]=preSumMatrix[i-1][j]+preSumMatrix[i][j-1]-preSumMatrix[i-1][j-1]+matrix[i-1][j-1];
+            }
+        }
+    }
+
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+        int result=preSumMatrix[row2+1][col2+1]-preSumMatrix[row2+1][col1]-preSumMatrix[row1][col2+1]+preSumMatrix[row1][col1];
+        return result;
+    }
