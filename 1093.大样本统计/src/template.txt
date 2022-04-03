@@ -1,0 +1,15 @@
+        //左右指针代码模板
+        initialize();
+        while(isLeftPointMeetRightPoint())
+        {
+            if(isLeftPointMove())
+            {
+                leftPointMove();
+                doSomthing();
+            }
+            if(isRightPointMove())
+            {
+                rightPintMove();
+                doSomthing();
+            }
+        }
