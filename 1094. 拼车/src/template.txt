@@ -1,0 +1,20 @@
+        //1.差分数组思想的应用，差分数组的构造
+        for(int i=0;i<trips.length;i++)
+        {
+            int count=trips[i][0];
+            int start=trips[i][1];
+            //2.区间结束端点的处理
+            int end=trips[i][2]-1;
+            diff[start]=diff[start]+count;
+            //3.差分数组结束端点的处理
+            if(end+1<1000)
+            {
+                diff[end+1]=diff[end+1]-count;
+            }
+        }
+        //4.还原数组时首元素的处理
+        statistics[0]=diff[0];
+        if(statistics[0]>capacity)
+        {
+            result=false;
+        }
