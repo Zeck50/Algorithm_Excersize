@@ -5,6 +5,9 @@
             window.add(valueOf(right));
             doSomething();
 
+            //代码调试位置
+            System.println(window,left,right);
+
             //如果满足左指针右移的条件
             while(isLeftPointMove())
             {
