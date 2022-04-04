@@ -1,0 +1,15 @@
+        //如果满足右指针右移的条件
+        while(isRightPointMove())
+        {
+            right++;
+            window.add(valueOf(right));
+            doSomething();
+
+            //如果满足左指针右移的条件
+            while(isLeftPointMove())
+            {
+                left++;
+                window.remove(valueOf(left));
+                doSomething();
+            }
+        }
