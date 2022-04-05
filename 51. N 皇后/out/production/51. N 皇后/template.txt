@@ -1,0 +1,25 @@
+    List<List<String>> result=new ArrayList<>();
+    public List<List<String>> solveNQueens(int n) {
+        TrackType track=new TrackType();
+        backTrack(track,parameters...);
+        return result;
+    }
+
+    public void backTrack(TrackType track, Parameters...)
+    {
+        if(isEnd())
+        {
+            doSomething();
+            return;
+        }
+        for(choice:choiceList)
+        {
+            if(!isValid())
+            {
+                continue;
+            }
+            doSomething();
+            backTrack(parameters...);
+            undoSomething();
+        }
+    }
