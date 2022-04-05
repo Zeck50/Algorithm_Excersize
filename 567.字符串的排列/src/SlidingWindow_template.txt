@@ -1,0 +1,12 @@
+while(isRightMove())
+{
+    doSomething();
+    right++
+    window.add(valueOf(right));
+    while(isLeftMove())
+    {
+        doSomething();
+        left++;
+        window.remove(valueOf(left));
+    }
+}
