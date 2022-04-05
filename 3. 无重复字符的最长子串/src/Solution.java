@@ -31,7 +31,6 @@ public class Solution {
     public static void main(String[] args)
     {
 
-
         String s1="abcabcbb";
         int result1=(new Solution()).lengthOfLongestSubstring(s1);
         System.out.println(result1);
