@@ -1,0 +1,37 @@
+        int left=0;
+        int right=0;
+        int valid=0;
+        HashMap<Character,Integer> need=new HashMap<>();
+        HashMap<Character,Integer> window=new HashMap<>();
+        for(int i=0;i<p.length();i++)
+        {
+            need.put(p.charAt(i),need.getOrDefault(p.charAt(i),0)+1);
+        }
+
+        while(right<s.length())
+        {
+            char tempRchar=s.charAt(right);
+            right++;
+            if(need.containsKey(tempRchar))
+            {
+                window.put(tempRchar,window.getOrDefault(tempRchar,0)+1);
+                if(need.get(tempRchar).equals(window.get(tempRchar)))
+                {
+                    valid++;
+                }
+            }
+
+            while(right-left>=p.length())
+            {
+                char tempLchar=s.charAt(left);
+                left++;
+                if(need.containsKey(tempLchar))
+                {
+                    if(need.get(tempLchar).equals(window.get(tempLchar)))
+                    {
+                        valid--;
+                    }
+                    window.put(tempLchar,window.getOrDefault(tempLchar,0)-1);
+                }
+            }
+        }
