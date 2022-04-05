@@ -1,0 +1,33 @@
+    ResultType result=new ResultType();
+
+    public List<List<Integer>> permute(int[] nums)
+    {
+        //1.定义路径
+        TrackType track=new TrackType();
+        //2.启动回溯
+        backTrack(nums,track,used);
+        return res;
+    }
+    private void backTrack(Parameters...)
+    {
+        //3.结束条件的选取
+        if(isEnd())
+        {
+            updateResult();
+            return;
+        }
+        //4.选择的遍历
+        for(choice:choiceList)
+        {
+            //5.判断选择范围
+            if(isNotValidChoice())
+            {
+                continue;
+            }
+            //6.做选择
+            doSomething();
+            backTrack(parameters...);
+            //7.撤销选择
+            reverseDoSomething();
+        }
+    }
