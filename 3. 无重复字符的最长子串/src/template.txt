@@ -1,0 +1,15 @@
+        //1.滑动窗口思想的应用
+        while(right<s.length())
+        {
+            doSomething();
+            right++;
+            //2.窗口更新的判断
+            updateWindow();
+            while(window.getOrDefault(tempRchar,0)>1)
+            {
+               doSomething();
+                left++;
+                updateWindow();
+            }
+            //3.求最大值函数的应用
+            getResult();
