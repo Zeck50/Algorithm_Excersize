@@ -14,7 +14,7 @@
  * }
  */
 
-public class Solution {
+public class SolutionTraversal {
     public static int maxdepth;
     public static int currentDepth = 1;
 
@@ -25,13 +25,13 @@ public class Solution {
 
     public void traverse(TreeNode node) {
         if (node == null) {
+            maxdepth = Math.max(currentDepth, maxdepth);
             return;
         }
         currentDepth++;
         traverse(node.left);
         traverse(node.right);
         currentDepth--;
-        maxdepth = Math.max(currentDepth, maxdepth);
     }
 
     public static void main(String[] args) {
@@ -46,7 +46,7 @@ public class Solution {
         test1_node_20.left = test1_node_15;
         test1_node_20.right = test1_node_7;
 
-        int result1 = (new Solution()).maxDepth(test1_node_3);
+        int result1 = (new SolutionTraversal()).maxDepth(test1_node_3);
         System.out.println(result1);
 
 
