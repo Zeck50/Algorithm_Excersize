@@ -1,4 +1,4 @@
-public class Solution {
+public class SolutionTraversal {
     public TreeNode invertTree(TreeNode root) {
         traverse(root);
         return root;
@@ -32,10 +32,10 @@ public class Solution {
         test1_node2.right=test1_node3;
         test1_node7.left=test1_node6;
         test1_node7.right=test1_node9;
-        (new Solution()).printTree(test1_node4);
-        TreeNode result1=(new Solution()).invertTree(test1_node4);
+        (new SolutionTraversal()).printTree(test1_node4);
+        TreeNode result1=(new SolutionTraversal()).invertTree(test1_node4);
         System.out.println();
-        (new Solution()).printTree(result1);
+        (new SolutionTraversal()).printTree(result1);
     }
 
     public void printTree(TreeNode node)
