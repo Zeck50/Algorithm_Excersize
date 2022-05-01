@@ -1,0 +1,15 @@
+/* 基本的二叉树节点 */
+class TreeNode {
+    int val;
+    TreeNode left, right;
+}
+void traverse(TreeNode root) {
+    if (root == null) {
+        return;
+    }
+    // 前序位置
+    traverse(root.left);
+    // 中序位置
+    traverse(root.right);
+    // 后序位置
+}
