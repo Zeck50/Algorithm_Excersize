@@ -1,0 +1,5 @@
+if(EXISTS "/Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13/unittest/build/test_leetcode_13[1]_tests.cmake")
+  include("/Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13/unittest/build/test_leetcode_13[1]_tests.cmake")
+else()
+  add_test(test_leetcode_13_NOT_BUILT test_leetcode_13_NOT_BUILT)
+endif()
