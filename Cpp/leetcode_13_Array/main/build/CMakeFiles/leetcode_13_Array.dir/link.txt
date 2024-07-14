@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc /Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13_Array/main/lib/libleetcode_13_Array.a CMakeFiles/leetcode_13_Array.dir/Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13_Array/main/src/leetcode_13_Array.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib /Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13_Array/main/lib/libleetcode_13_Array.a
