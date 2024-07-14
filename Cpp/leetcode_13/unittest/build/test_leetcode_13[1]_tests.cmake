@@ -1,5 +1,0 @@
-add_test([=[SolutionTest.test_case1]=]  /Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13/unittest/bin/test_leetcode_13 [==[--gtest_filter=SolutionTest.test_case1]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SolutionTest.test_case1]=]  PROPERTIES WORKING_DIRECTORY /Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13/unittest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[SolutionTest.test_case2]=]  /Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13/unittest/bin/test_leetcode_13 [==[--gtest_filter=SolutionTest.test_case2]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SolutionTest.test_case2]=]  PROPERTIES WORKING_DIRECTORY /Users/zeck/learning/CppPro/workdir/Algorithm_Excersize/Cpp/leetcode_13/unittest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  test_leetcode_13_TESTS SolutionTest.test_case1 SolutionTest.test_case2)
