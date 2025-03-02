@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "map": "cpp",
+        "xutility": "cpp",
+        "xtree": "cpp",
+        "utility": "cpp",
+        "tuple": "cpp",
+        "initializer_list": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "format": "cpp",
+        "xstring": "cpp",
+        "istream": "cpp",
+        "memory": "cpp",
+        "type_traits": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "ostream": "cpp"
+    }
+}
